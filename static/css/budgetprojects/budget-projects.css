@@ -1,0 +1,35 @@
+.budget-projects-page-main{
+    background-image: linear-gradient( rgba(0,0,0,.65), rgba(0,0,0,.65) ), url('../../images/img2.jpg');
+    background-size: cover;
+    min-height:70vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.budget-interiors-image-setting{
+    background-size: cover;
+    min-height:40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.budget-interior-menu{
+    cursor:pointer;
+}
+
+.our-costing-pricing-card{
+    background-size: contain;
+    min-height:40vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.budget-price-text{
+    color:white;
+    font-weight:bold;
+    font-size:xx-large;
+    cursor:default;
+}

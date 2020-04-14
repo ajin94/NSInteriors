@@ -1,0 +1,121 @@
+
+{% extends 'template_base/ClientBase.html' %}
+{% block page_title %} ABOUT US {% endblock %}
+{% set active_page = "about" %}
+
+{% block custom_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/aboutuspage/about-us-page.css') }}">
+{% endblock %}
+
+
+{% block client_body %}
+<div class="container-fluid aboutus-page-main py-5 pl-5">
+    <div class="pl-5">
+        <h1 style="margin-top:150px;font-weight:bolder;color: #ffffff;">About US</h1>
+        <p style="color:#faba00; font-weight:bold !important;">
+            <a href="{{ url_for('index') }}" style="color:#faba00; text-decoration: none;">Home</a> | <a href="#" style="color:#faba00; text-decoration: none;">About Us</a>
+        </p>
+    </div>
+</div>
+
+<div class="container-fluid py-5">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <h5 class="text-justify">
+                " Founded by Mr. Nikhil Shetty in 2003, NS Interiors is an Interior Design Firm in the business of designing eloquent, elegant spaces with a clear vision of originality, style and comfort.
+Hence our motto – ‘Comfort, with style!’
+With over 18 years of experience in the field, we have undertaken a multitude of diverse projects. Our strengths lie in our quality and experience, expertise and craftsmanship, all delivered at the most affordable prices, in the shortest possible turnaround time. Our professional ethic combined with our dedicated workforce make us a key player in designing, decorating, modifying, renovating and redefining any space. We use high end material and top of the line equipment in all our projects.
+With our ability to bring together interior designing concepts that complement their architectural design, we have come to be known for our innovative and creative ideas.
+Our ideas look to bring together aesthetic, age-old architecture with modern design concepts.
+Our founder, Mr. Nikhil Shetty has served as the BOS Chairman of Interior Designing at Mangalore University. Specializing in Guthu - Traditional Bunt Houses, he has attended workshops on interior designing across India, Pilikula Guthu House, and other heritage projects.
+ "</h5>
+        </div>
+    </div>
+
+    <div class="row">
+        <h3 class="w-100 text-center mt-5 mb-3"><b>Our Founder</b></h3>
+        <div class="col-md-3 mx-auto">
+            <img class="w-100 img-thumbnail" src="{{ url_for('static', filename='images/founder.jpeg') }}"/>
+        </div>
+        <h4 class="w-100 text-center"><b>Nikhil B SHetty</b></h4>
+        <h6 class="w-100 text-center mb-3">DEC, B.Sc, ID, MBA(IM)</h6>
+    </div>
+</div>
+
+<div class="container-fluid projectflow pb-5">
+    <div class="row h-100 pt-3 pb-5">
+        <div class="w-100 my-auto">
+            <h1 style="font-weight:bolder;color: #ffffff;" class="w-100 text-center mt-5">Design Process</h1>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center mb-5">
+        <div class="col-md-3 py-3 process-cards ml-md-5">
+            <div class="row">
+                <div class="col-4">
+                    <img src="{{ url_for('static', filename = 'images/png1.png') }}" class="w-100 h-100"/>
+                </div>
+                <div class="col-8">
+                    <h3>Client Meeting & Discussion</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 py-3 process-cards mx-md-5">
+            <div class="row">
+                <div class="col-4">
+                    <img src="{{ url_for('static', filename = 'images/png2.png') }}" class="w-100 h-100"/>
+                </div>
+                <div class="col-8">
+                    <h3>Conceptual Design</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 py-3 process-cards">
+            <div class="row">
+                <div class="col-4">
+                    <img src="{{ url_for('static', filename = 'images/png3.png') }}" class="w-100 h-100"/>
+                </div>
+                <div class="col-8">
+                    <h3>Cost Estimation & Agreement</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center mt-4">
+        <div class="col-md-3 py-3 process-cards ml-md-5">
+            <div class="row">
+                <div class="col-4">
+                    <img src="{{ url_for('static', filename = 'images/png4.png') }}" class="w-100 h-100"/>
+                </div>
+                <div class="col-8">
+                    <h3>Design Visualization To Client</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 py-3 process-cards mx-md-5">
+            <div class="row">
+                <div class="col-4">
+                    <img src="{{ url_for('static', filename = 'images/png5.png') }}" class="w-100 h-100"/>
+                </div>
+                <div class="col-8">
+                    <h3>On Time Work design and implementation</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 py-3 process-cards">
+            <div class="row">
+                <div class="col-4">
+                    <img src="{{ url_for('static', filename = 'images/png6.png') }}" class="w-100 h-100"/>
+                </div>
+                <div class="col-8">
+                    <h3>Work Completion & Billing</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block custom_scripts %}
+<script src="{{ url_for('static', filename='js/aboutus-page-script.js') }}"></script>
+{% endblock %}

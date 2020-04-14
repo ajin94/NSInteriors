@@ -1,0 +1,148 @@
+
+{% extends 'template_base/ClientBase.html' %}
+{% block page_title %} BUDGET INTERIORS {% endblock %}
+{% set active_page = "budgetprojects" %}
+
+{% block custom_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/budgetprojects/budget-projects.css') }}">
+{% endblock %}
+
+
+{% block client_body %}
+<div class="container-fluid budget-projects-page-main py-5 pl-5 mb-3">
+    <div class="pl-5">
+        <h1 style="margin-top:150px;font-weight:bolder;color: #ffffff;">Budget Interiors</h1>
+        <p style="color:#faba00; font-weight:bold !important;">
+            <a href="{{ url_for('index') }}" style="color:#faba00; text-decoration: none;">Home</a> | <a href="#" style="color:#faba00; text-decoration: none;">Budget Interiors</a>
+        </p>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row my-5">
+        <div class="col-7 mx-auto">
+            <p class="w-100 text-justify" style="font-size:x-large;">
+                At NS interiors, you can set your budget for furniture and décor at any number you’re comfortable with. With our experience of over 19 years  in the field of interior designing we have carefully curated ideas to make space more usable and use  materials that are beautiful functional and effective. With us you can be rest assured ,as we use branded high quality materials and do not compromise on quality and durability. NS interiors provides you with 5 year warranty for all the service provided.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col budget-interiors-image-setting py-5"
+             style="background-image:linear-gradient( rgba(0,0,0,.65), rgba(0,0,0,.65) ), url('../static/images/budget5.jpg');">
+            <div class="my-5">
+                <p class="w-100 text-center py-5 budget-interior-menu"
+                   style="color:white; font-weight:bold;">BUDGET KITCHEN</p>
+            </div>
+        </div>
+        <div class="col budget-interiors-image-setting py-5"
+             style="background-image:linear-gradient( rgba(0,0,0,.65), rgba(0,0,0,.65) ), url('../static/images/budget2.jpg');">
+            <div class="my-5">
+                <p class="w-100 text-center py-5 budget-interior-menu"
+                   style="color:white; font-weight:bold;">BUDGET INTERIORS</p>
+            </div>
+        </div>
+        <div class="col budget-interiors-image-setting py-5"
+             style="background-image:linear-gradient( rgba(0,0,0,.65), rgba(0,0,0,.65) ), url('../static/images/budget1.jpg');">
+            <div class="my-5">
+                <p class="w-100 text-center py-5 budget-interior-menu"
+                   style="color:white; font-weight:bold;">BUDGET DESIGNS</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid pt-5 pb-1">
+    <h1 class="w-100 text-center">Our Costing</h1>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row my-2">
+        <div class="col-7 mx-auto">
+            <p class="w-100 text-center" style="font-size:x-large;">
+                We might be seeing people spending huge amount of money on interiors based on their requirements.<br/>
+                Here in NS Budget Interiors we do work on the best prices.<br/>
+            </p>
+        </div>
+    </div>
+    <!--<div class="row d-flex justify-content-center">-->
+        <!--<div class="col-12">-->
+            <!--<p class="w-100 text-center" style="font-size:x-large; font-weight:bold;">-->
+                <!--Our pricing for-->
+            <!--</p>-->
+        <!--</div>-->
+        <!--<div class="col-3 our-costing-pricing-card mr-1"-->
+             <!--style="background-image:linear-gradient( rgba(0,0,0,.65), rgba(0,0,0,.65) ), url('../static/images/2bhk.jpg');">-->
+            <!--<div class="my-5">-->
+                <!--<p class="w-100 text-center py-5 budget-price-text">2BHK House @<br/>4, 99,000 /-</p>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-3 our-costing-pricing-card ml-1"-->
+             <!--style="background-image:linear-gradient( rgba(0,0,0,.65), rgba(0,0,0,.65) ), url('../static/images/3bhk.png');-->
+                    <!--background-position: top;">-->
+            <!--<div class="my-5">-->
+                <!--<p class="w-100 text-center py-5 budget-price-text ">3BHK House @<br/>5, 99,000 /-</p>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+
+
+<div class="container-fluid pt-5 pb-3">
+    <h1 class="w-100 text-center">What the budget covers ?</h1>
+</div>
+
+<div class="container-fluid">
+    <div class="row my-2">
+        <div class="col-7 mx-auto">
+            <p class="w-100 text-center" style="font-size:large;">
+                False ceiling including Wiring and Lighting<br/>
+                TV unit, Crockery unit<br/>
+                Bedroom wardrobe of standard size including loft space<br/>
+                Kitchen Standard Size with all three level storage, Base unit & Head level storage<br/>
+                Two walls wallpaper, one as per the clients request.<br/>
+                2BHK will come with 2 wardrobes and 2 wallpapers / 2 wall stencils designs.<br/>
+                3BHK will come with 3 wardrobes and 3 wallpapers/3 stencils designs. <br/>
+                We can Mix and Match based on the client requirement for 2 and 3 BHK.<br/>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-5 pb-3">
+    <h1 class="w-100 text-center">Budget Designs</h1>
+</div>
+
+
+{% if template_info['image_list'] %}
+<div class="container pb-5">
+    <div class="row">
+        {% for data in template_info['image_list']%}
+        <div class="col-md-12 d-flex justify-content-center pb-3">
+            {% for image_name in data %}
+                <div class="col-md-3 pt-4">
+                    <img class="d-block w-100 img-thumbnail open-image" src="/static/images/{{ image_name }}" alt="budget image">
+                </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+
+<!--modals-->
+<div id="image-popup-modal" class="image-open-modal text-center">
+  <span class="image-open-close text-right">&times;</span>
+  <img class="image-open-modal-content" src="" style="width:50%">
+</div>
+{% endblock %}
+
+{% block custom_scripts %}
+<script src="{{ url_for('static', filename='js/budget-script.js') }}"></script>
+{% endblock %}

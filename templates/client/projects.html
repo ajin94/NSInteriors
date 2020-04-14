@@ -1,0 +1,49 @@
+{% extends 'template_base/ClientBase.html' %}
+{% block page_title %} PROJECTS {% endblock %}
+{% set active_page = "projects" %}
+
+{% block custom_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/projectspage/projects-page.css') }}">
+{% endblock %}
+
+
+{% block client_body %}
+<div class="container-fluid projects-page-main py-5 pl-5">
+    <div class="pl-5">
+        <h1 style="margin-top:150px;font-weight:bolder;color: #ffffff;">Our Projects</h1>
+        <p style="color:#faba00; font-weight:bold !important;">
+            <a href="{{ url_for('index') }}" style="color:#faba00; text-decoration: none;">Home</a> | <a href="#" style="color:#faba00; text-decoration: none;">Projects</a>
+        </p>
+    </div>
+</div>
+
+<div class="container-fluid py-5">
+    <h1 class="w-100 text-center">Latest Projects</h1>
+</div>
+
+{% if template_info['image_list'] %}
+<div class="container pb-5">
+    <div class="row">
+        {% for data in template_info['image_list']%}
+        <div class="col-md-12 d-flex justify-content-center pb-3">
+            {% for image_name in data %}
+                <div class="col-md-3 pt-4">
+                    <img class="d-block w-100 img-thumbnail open-image" src="/static/images/{{ image_name }}" alt="budget image">
+                </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<!--modals-->
+<div id="image-popup-modal" class="image-open-modal text-center">
+  <span class="image-open-close text-right">&times;</span>
+  <img class="image-open-modal-content" src="" style="width:50%">
+</div>
+{% endblock %}
+
+{% block custom_scripts %}
+<script src="{{ url_for('static', filename='js/projects-page-script.js') }}"></script>
+{% endblock %}
