@@ -80,7 +80,6 @@ def projects():
                     del temp_list
         template_dict['image_list'] = main_list
     except Exception as e:
-        print("exception occurred")
         template_dict['image_list'] = {}
 
     return render_template('client/projects.html', template_info=template_dict)
