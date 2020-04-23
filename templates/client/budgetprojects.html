@@ -1,4 +1,3 @@
-g
 {% extends 'template_base/ClientBase.html' %}
 {% block page_title %} BUDGET INTERIORS {% endblock %}
 {% set active_page = "budgetprojects" %}
@@ -113,27 +112,6 @@ g
         </div>
     </div>
 </div>
-
-<div class="container-fluid pt-5 pb-3">
-    <h1 class="w-100 text-center">Budget Designs</h1>
-</div>
-
-
-{% if template_info['image_list'] %}
-<div class="container pb-5">
-    <div class="row">
-        {% for data in template_info['image_list']%}
-        <div class="col-md-12 d-flex justify-content-center pb-3">
-            {% for image_name in data %}
-                <div class="col-md-3 pt-4">
-                    <img class="d-block w-100 img-thumbnail open-image" src="/static/images/{{ image_name }}" alt="budget image">
-                </div>
-            {% endfor %}
-        </div>
-        {% endfor %}
-    </div>
-</div>
-{% endif %}
 
 
 <!--modals-->
